@@ -1,0 +1,241 @@
+.sidenav__header {
+  z-index: 10;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  top: 2em;
+  left: 2em;
+  right: 2em;
+}
+
+.sidenav__button {
+  z-index: 10;
+  grid-column-gap: 0.625em;
+  grid-row-gap: 0.625em;
+  background-color: transparent;
+  justify-content: flex-end;
+  align-items: center;
+  margin: -1em;
+  padding: 1em;
+  display: flex;
+  border: none;
+  cursor: pointer;
+}
+
+.sidenav__button-text {
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 1.5em;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.sidenav__button-text .sidenav__button-label {
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  line-height: 1.5em;
+}
+
+.sidenav__button-text .sidenav__button-label:first-child {
+  position: relative;
+}
+
+.sidenav__button-icon {
+  justify-content: center;
+  align-items: center;
+  width: 1.5em;
+  height: 1.5em;
+  transition: transform 0.4s cubic-bezier(0.65, 0.05, 0, 1);
+  display: flex;
+  pointer-events: none;
+}
+
+.sidenav__button-icon-svg {
+  width: 100%;
+}
+
+.sidenav__button-label {
+  color: #131313;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.125em;
+  pointer-events: none;
+  user-select: none;
+}
+
+.sidenav__nav {
+  z-index: 9;
+  width: 100%;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  position: fixed;
+  inset: 0%;
+}
+
+.sidenav__overlay {
+  z-index: 0;
+  cursor: pointer;
+  background-color: #13131366;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
+}
+
+.sidenav__menu {
+  grid-column-gap: 5em;
+  grid-row-gap: 5em;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 35em;
+  height: 100%;
+  margin-left: auto;
+  padding-top: 6em;
+  padding-bottom: 2em;
+  position: relative;
+  overflow: auto;
+}
+
+.sidenav__menu-bg {
+  z-index: 0;
+  position: absolute;
+  inset: 0%;
+}
+
+.sidenav__menu-bg-panel {
+  z-index: 0;
+  background-color: #ebdcc5;
+  border-top-left-radius: 1.25em;
+  border-bottom-left-radius: 1.25em;
+  position: absolute;
+  inset: 0%;
+}
+
+.sidenav__menu-bg-panel.is--first {
+  background-color: #e04645;
+}
+
+.sidenav__menu-bg-panel.is--second {
+  background-color: #131313;
+}
+
+.sidenav__menu-inner {
+  z-index: 1;
+  grid-column-gap: 5em;
+  grid-row-gap: 5em;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+  display: flex;
+  position: relative;
+  overflow: auto;
+}
+
+.sidenav__menu-list {
+  flex-flow: column;
+  width: 100%;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+}
+
+.sidenav__menu-list-item {
+  height: 6em;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidenav__menu-link {
+  grid-column-gap: 0.75em;
+  grid-row-gap: 0.75em;
+  color: #131313;
+  width: 100%;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  padding-left: 2em;
+  text-decoration: none;
+  display: flex;
+}
+
+.sidenav__menu-link-heading {
+  z-index: 1;
+  text-transform: uppercase;
+  font-family: PP Neue Corp Tight, Arial, sans-serif;
+  font-size: 5.625em;
+  font-weight: 700;
+  line-height: 0.75;
+  transition: transform 0.55s cubic-bezier(0.65, 0.05, 0, 1);
+  position: relative;
+}
+
+.sidenav__menu-link-eyebrow {
+  z-index: 1;
+  color: #e04645;
+  text-transform: uppercase;
+  font-family: RM Mono, Arial, sans-serif;
+  font-weight: 400;
+  position: relative;
+}
+
+.sidenav__menu-details {
+  grid-column-gap: 1.25em;
+  grid-row-gap: 1.25em;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 2em;
+  display: flex;
+}
+
+.sidenav__menu-socials {
+  grid-column-gap: 1.5em;
+  grid-row-gap: 1.5em;
+  flex-flow: row;
+  display: flex;
+}
+
+.noscript {
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  .sidenav__menu-socials {
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+  }
+
+  .sidenav__menu-bg-panel {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .sidenav__menu {
+    width: 100%;
+  }
+
+  .sidenav__menu-list-item {
+    height: 4.5em;
+  }
+
+  .sidenav__menu-link-heading {
+    font-size: 4em;
+  }
+}
