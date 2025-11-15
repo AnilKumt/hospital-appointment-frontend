@@ -49,8 +49,10 @@ export default function SideNav() {
     });
     // Set initial button text positions
     if (menuButtonTexts.length >= 2) {
-      gsap.set(menuButtonTexts[0], { yPercent: 0 }); // Menu - visible
-      gsap.set(menuButtonTexts[1], { yPercent: 100 }); // Close - hidden below
+      // Menu (first) - visible at yPercent: 0
+      gsap.set(menuButtonTexts[0], { yPercent: 0, opacity: 1 });
+      // Close (second) - hidden below at yPercent: 100
+      gsap.set(menuButtonTexts[1], { yPercent: 100, opacity: 1 });
     }
     gsap.set(menuButtonIcon, { rotate: 0 });
 

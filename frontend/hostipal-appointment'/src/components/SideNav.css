@@ -1,5 +1,5 @@
 .sidenav__header {
-  z-index: 10;
+  z-index: 1000;
   justify-content: flex-end;
   align-items: center;
   display: flex;
@@ -7,6 +7,11 @@
   top: 2em;
   left: 2em;
   right: 2em;
+  pointer-events: none;
+}
+
+.sidenav__header * {
+  pointer-events: auto;
 }
 
 .sidenav__button {
@@ -21,6 +26,16 @@
   display: flex;
   border: none;
   cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
+.sidenav__button:focus {
+  outline: none;
+}
+
+.sidenav__button:active {
+  transform: scale(0.98);
 }
 
 .sidenav__button-text {
@@ -31,6 +46,9 @@
   display: flex;
   overflow: hidden;
   position: relative;
+  width: auto;
+  min-width: 60px;
+  pointer-events: none;
 }
 
 .sidenav__button-text .sidenav__button-label {
@@ -39,9 +57,13 @@
   top: 0;
   white-space: nowrap;
   line-height: 1.5em;
+  height: 1.5em;
+  display: block;
+  width: 100%;
+  text-align: right;
 }
 
-.sidenav__button-text .sidenav__button-label:first-child {
+.sidenav__button-text .sidenav__button-label:nth-child(1) {
   position: relative;
 }
 
